@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1 + div: h1의 인접 형제 div 하나. (형제가 바로 붙어있어야 함) */
+        main > h1 + div > h1 {
+            color: pink;
+        }
+        
+        /* h1 ~ div:  h1의 형제 중 모든 div들. 'h1 ~ *' 라고 하면 코드가 더 밑에 있어도 우선순위가 밀림.*/
+        main > h1 ~ div > h1 {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>제목1</h1>
+        <div>
+            <h1>제목2</h1>
+        </div>
+        <p>test</p>
+        <div>
+            <h1>제목3</h1>
+        </div>
+    </main>
+</body>
+</html>

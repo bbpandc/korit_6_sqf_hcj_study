@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label {
+            /* label 은 인라인 요소 */
+            display: inline-block;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+        
+        /* .custom-chk:checked + label: .custom-chk 가 체크되었을 때의 모든 형제 label들*/
+        .custom-chk:checked + label{
+            /* content box 에만 색 적용 */
+            background-clip: content-box;
+            background-color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="chk1" class="custom-chk">
+    <label for="chk1"></label>
+    <label for="chk1">체크1</label>
+
+    <input type="checkbox" id="chk2" class="custom-chk">
+    <label for="chk2"></label>
+    <label for="chk2">체크2</label>
+</body>
+</html>

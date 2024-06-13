@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            height: 1000px;
+        }
+
+        .box1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            box-sizing: border-box;
+            margin: 0px 20px;
+            padding: 20px;
+            border: 1px solid black;
+            width: 700px;
+            height: 900px;
+        }
+
+        .box1-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            height: 40%;
+        }
+
+        .box1-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            height: 40%;
+        }
+
+        .box1-3 {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            height: 40%;
+        }
+
+        .box1-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            height: 40%;
+        }
+
+        .box-a {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box-a2 {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box-a-1 {
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-a2-1 {
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-b {
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-c {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box-c2 {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box-c-1 {
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-c-2 {
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-d {
+            display: block;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="box1-1">
+                <div class="box-a">
+                    <div class="box-a-1"></div>
+                    <div class="box-a-1"></div>
+                </div>
+                <div class="box-a2">
+                    <div class="box-a2-1"></div>
+                    <div class="box-a2-1"></div>
+                </div>
+            </div>
+            <div class="box1-2">
+                <div class="box-b"></div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="box1-3">
+                <div class="box-c">
+                    <div class="box-c-1"></div>
+                    <div class="box-c-1"></div>
+                    <div class="box-c-1"></div>
+                </div>
+                <div class="box-c2">
+                    <div class="box-c-2"></div>
+                    <div class="box-c-2"></div>
+                    <div class="box-c-2"></div>
+                </div>   
+            </div>
+            <div class="box1-4">
+                <div class="box-d"></div>
+                <div class="box-d"></div>
+                <div class="box-d"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
