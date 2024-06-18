@@ -126,8 +126,8 @@
     <div class="container">
         <h1 class="title">TODO LIST</h1>
         <div class="input-box">
-            <input type="text" class="todo-input">
-            <button class="button todo-submit">확인</button>
+            <input type="text" class="todo-input" onkeydown="handleTodoInputKeyDown(event)">
+            <button class="button todo-submit" onclick="handleTodoOkClick(event)">확인</button>
         </div>
         <div class="todo-container">
             <ul class="todo-list-container">
@@ -182,5 +182,6 @@
             </ul>
         </div>
     </div>
+    <script src="todolist.js"></script>
 </body>
 </html>
