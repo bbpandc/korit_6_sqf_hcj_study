@@ -120,6 +120,40 @@
                 margin: 5px;
             }
         }
+
+        .modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #00000066;
+        }
+
+        .modal-show {
+            display: flex;
+        }
+
+        .modal-edit-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 360px;
+            height: 200px;
+            background-color: white;
+        }
+
+        .modal-title {
+            margin: 0;
+            font-size: 18px;
+            cursor: default;
+        }
     </style>
 </head>
 <body>
@@ -130,47 +164,7 @@
             <button class="button todo-submit" onclick="handleTodoOkClick(event)">확인</button>
         </div>
         <div class="todo-container">
-            <ul class="todo-list-container">
-                <li class="todo-card">
-                    <h3 class="todo-date">2024-06-18 12:39</h3>
-                    <p class="todo-content">오늘 할 일</p>
-                    <div class="todo-buttons">
-                        <button class="button edit-button">수정</button>
-                        <button class="button delete-button">삭제</button>
-                    </div>
-                </li>
-                <li class="todo-card">
-                    <h3 class="todo-date">2024-06-18 12:39</h3>
-                    <p class="todo-content">오늘 할 일</p>
-                    <div class="todo-buttons">
-                        <button class="button edit-button">수정</button>
-                        <button class="button delete-button">삭제</button>
-                    </div>
-                </li>
-                <li class="todo-card">
-                    <h3 class="todo-date">2024-06-18 12:39</h3>
-                    <p class="todo-content">오늘 할 일</p>
-                    <div class="todo-buttons">
-                        <button class="button edit-button">수정</button>
-                        <button class="button delete-button">삭제</button>
-                    </div>
-                </li>
-                <li class="todo-card">
-                    <h3 class="todo-date">2024-06-18 12:39</h3>
-                    <p class="todo-content">오늘 할 일</p>
-                    <div class="todo-buttons">
-                        <button class="button edit-button">수정</button>
-                        <button class="button delete-button">삭제</button>
-                    </div>
-                </li>
-                <li class="todo-card">
-                    <h3 class="todo-date">2024-06-18 12:39</h3>
-                    <p class="todo-content">오늘 할 일</p>
-                    <div class="todo-buttons">
-                        <button class="button edit-button">수정</button>
-                        <button class="button delete-button">삭제</button>
-                    </div>
-                </li>
+            <ul class="todo-list-conatiner">
                 <li class="todo-card">
                     <h3 class="todo-date">2024-06-18 12:39</h3>
                     <p class="todo-content">오늘 할 일</p>
@@ -181,6 +175,9 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="modal" onkeydown="if(event.keyCode === 27) this.click();" onclick="handleModalBackgroundClick()">
+        
     </div>
     <script src="todolist.js"></script>
 </body>
