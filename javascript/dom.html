@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-box">
+        <div id="input1">
+            <input type="text">
+        </div>
+        <div id="input2">
+            <input type="text">
+        </div>
+    </div>
+    <div>
+        <button>확인</button>
+    </div>
+    <script>
+        // document: 최상위. s가 붙는 함수는 리스트로 반환됨
+        const bodyList = document.getElementsByTagName("body");
+        const body = bodyList[0]; // body 객체
+        const divList = document.getElementsByTagName("div");
+    //  =
+        const mainBoxList = body.getElementsByClassName("main-box"); // class명으로 가져오는 함수기 때문에 앞에 .을 안붙임
+        const input1 = mainBoxList[0]
+                        .getElementsByTagName("div")[0]
+                        .getElementsByTagName("input")[0];
+    //  =
+        const input1_1 = document.getElementsByTagName("input")[0];
+    //  =
+        // id로 찾을 때는 document로 접근
+        const [ input1_1_1 ] = document.getElementById("input1").getElementsByTagName("input"); // 비구조 할당
+
+        console.log(bodyList);
+        console.log({body}); // 객체로 가져오기. key:value의 이름이 모두 body
+        console.log({mainBox: divList[0]});
+    //  =
+        console.log({mainBox: mainBoxList[0]});
+        console.log(input1_1_1);
+
+        ///////////////////////////////////////////////////////////////////////////////
+        // <<< QuerySelector >>>
+
+        const input1_1_1_1 = document.querySelector("body #input1 > input");
+        console.log(input1_1_1_1);
+        // All -> list로 가져옴
+        const inputList = document.querySelectorAll("input");
+        console.log(inputList);
+        // All이 아닌데 여러개가 있는 요소를 들고오면 첫번째 요소를 가져옴
+        const input1_1_1_1_1 = document.querySelector("input");
+
+        ///////////////////////////////////////////////////////////////////////////////
+        const button = document.querySelector("button");
+
+        // attribute: 속성
+        console.log(button.getAttribute("onclick"));
+        console.log(button.setAttribute("onclick", "alert('test');"));
+        console.log(button.onclick);
+
+        // alert창 띄우기
+        // 이렇게 하면 매개변수는 무조건 event 객체가 들어옴
+        button.onclick = (e) => {
+            console.log(e);
+            const [ input_1, input_2 ] = document.querySelectorAll("input");
+            alert(`name: ${input_1.value}\nage: ${input_2.value}`);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="addText(event)">
+    <script>
+        const textInput = document.querySelector("input");
+        // localStorage의 값은 새로고침 했을 (페이지가 열릴) 때 유지되지만, 새로 입력을 하면 값이 날라감
+        const lsTextList = localStorage.getItem("list"); // 페이지가 열릴 때 list(key값)를 가져옴
+        console.log(lsTextList);
+                       // lsTextList가 null이면
+        let textList = !lsTextList ? [] : JSON.parse(lsTextList);
+        
+        function addText(e) {
+            const textValue = e.target.value;
+            if(e.keyCode === 13) {
+                textList = [ ...textList, textValue ];
+                e.target.value = "";
+                console.log(textList);
+                                     // key, value
+                localStorage.setItem("list", JSON.stringify(textList));
+            }
+        }
+    </script>
+</body>
+</html>
